@@ -1,4 +1,20 @@
 document.addEventListener('DOMContentLoaded', function () {
+  var splash = document.getElementById('intro-splash');
+  if (splash) {
+    if (sessionStorage.getItem('introShown')) {
+      splash.remove();
+    } else {
+      document.body.classList.add('intro-active');
+      sessionStorage.setItem('introShown', '1');
+      splash.addEventListener('animationend', function (e) {
+        if (e.animationName === 'splash-slide-up') {
+          document.body.classList.remove('intro-active');
+          splash.remove();
+        }
+      });
+    }
+  }
+
   var toggle = document.querySelector('.nav-toggle');
   var links = document.querySelector('.nav-links');
   if (toggle && links) {

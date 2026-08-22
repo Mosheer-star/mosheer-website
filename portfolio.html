@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>نبذة — مشير مصطفى</title>
+<title>بورتفوليو — مشير مصطفى</title>
 <link rel="icon" type="image/png" href="assets/logo.png">
 <link rel="stylesheet" href="css/style.css">
 </head>
@@ -14,8 +14,8 @@
     <a href="index.html" class="brand"><img src="assets/logo.png" alt="شعار مشير"><span class="brand-name">MOSHEER</span></a>
     <ul class="nav-links">
       <li><a href="index.html">الرئيسية</a></li>
-      <li><a href="about.html" class="active">نبذة</a></li>
-      <li><a href="portfolio.html">بورتفوليو</a></li>
+      <li><a href="about.html">نبذة</a></li>
+      <li><a href="portfolio.html" class="active">بورتفوليو</a></li>
       <li><a href="articles.html">مقالات</a></li>
       <li><a href="contact.html">تواصل</a></li>
     </ul>
@@ -26,22 +26,36 @@
 <header class="page-header">
   <span class="hero-bar top"></span>
   <div class="container">
-    <p class="eyebrow">نبذة</p>
-    <h1>حكايتي باختصار</h1>
-    <p>الصفحة دي هتتحدث أول ما تحدد التفاصيل النهائية — دلوقتي دي نسخة أولى تقدر تعدلها براحتك.</p>
+    <p class="eyebrow">بورتفوليو</p>
+    <h1>شغل بيتكلم عن نفسه</h1>
+    <p>مجموعة من الفيديوهات اللي بشتغل عليها — هتتزود أول ما تجهز.</p>
   </div>
 </header>
 
 <section class="section">
-  <div class="container about-body">
-    <div class="about-portrait reveal">
-      <img src="assets/profile.jpg" alt="مشير مصطفى">
+  <div class="container">
+
+    <!-- لما تبعتلي فيديوهاتك، هتتحط هنا كل واحد في كارت زي المثال ده -->
+    <div class="empty-state reveal">
+      <h3>لسه معندناش فيديوهات هنا</h3>
+      <p>ابعتلي الفيديوهات اللي عايز تعرضها، وهتظهر هنا كل واحد في كارت بعنوان ووصف قصير.</p>
+      <a href="contact.html" class="btn btn-primary">جهّز أول فيديو</a>
     </div>
-    <!-- عدّل الفقرات دي براحتك بمعلومات أدق عن مشوارك واهتماماتك -->
-    <p class="reveal"><strong>مشير مصطفى</strong>، مهتم بمجالات فنية وأعمال متنوعة، وبستخدم المنصات المختلفة — يوتيوب وتيك توك وفيسبوك — عشان أوثق وأشارك اللي بشتغل عليه.</p>
-    <p class="reveal">المحتوى بتاعي مش محصور في نوع واحد؛ بميل إني أجرب وأستكشف، وده اللي بيخليني مكمّل على أكتر من منصة في نفس الوقت بدل ما ألتزم بقالب واحد.</p>
-    <p class="reveal">الموقع ده هو المساحة اللي هتجمع كل حاجة في مكان واحد — من روابط القنوات لحد البورتفوليو والمقالات اللي هتتضاف تدريجياً.</p>
-    <a href="contact.html" class="btn btn-primary reveal">تواصل معايا</a>
+
+    <!--
+    مثال لكارت فيديو (فعّله واحذف الـ empty-state لما يكون عندك فيديو فعلي):
+
+    <div class="video-grid">
+      <article class="video-card reveal">
+        <video controls preload="metadata" src="assets/videos/video-1.mp4"></video>
+        <div class="video-info">
+          <h3>عنوان الفيديو</h3>
+          <p>وصف قصير عن الفيديو</p>
+        </div>
+      </article>
+    </div>
+    -->
+
   </div>
 </section>
 
