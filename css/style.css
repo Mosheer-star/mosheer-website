@@ -364,8 +364,15 @@ img{ max-width:100%; display:block; }
   flex-wrap:wrap;
   gap:16px;
 }
-.footer-links{ display:flex; gap:18px; }
-.footer-links a{ color:var(--text-muted); }
+.footer-links{ display:flex; gap:22px; flex-wrap:wrap; }
+.footer-links a{
+  display:inline-flex;
+  align-items:center;
+  gap:7px;
+  color:var(--text-muted);
+  font-size:14px;
+}
+.footer-links a svg{ width:16px; height:16px; }
 .footer-links a:hover{ color:var(--accent); }
 .footer-note{ font-size:13px; color:var(--text-muted); }
 
