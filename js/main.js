@@ -1,18 +1,31 @@
 document.addEventListener('DOMContentLoaded', function () {
   var splash = document.getElementById('intro-splash');
   if (splash) {
-    if (sessionStorage.getItem('introShown')) {
-      splash.remove();
-    } else {
-      document.body.classList.add('intro-active');
-      sessionStorage.setItem('introShown', '1');
-      splash.addEventListener('animationend', function (e) {
-        if (e.animationName === 'splash-slide-up') {
-          document.body.classList.remove('intro-active');
-          splash.remove();
-        }
-      });
+    document.body.classList.add('intro-active');
+
+    var particleHost = document.getElementById('intro-particles');
+    if (particleHost) {
+      var count = 26;
+      for (var i = 0; i < count; i++) {
+        var p = document.createElement('span');
+        p.className = 'intro-particle';
+        var size = 2 + Math.random() * 3;
+        p.style.width = size + 'px';
+        p.style.height = size + 'px';
+        p.style.left = Math.random() * 100 + '%';
+        p.style.setProperty('--drift', (Math.random() * 40 - 20) + 'px');
+        p.style.animationDuration = (3 + Math.random() * 2.5) + 's';
+        p.style.animationDelay = (Math.random() * 3) + 's';
+        particleHost.appendChild(p);
+      }
     }
+
+    splash.addEventListener('animationend', function (e) {
+      if (e.animationName === 'splash-slide-up') {
+        document.body.classList.remove('intro-active');
+        splash.remove();
+      }
+    });
   }
 
   var toggle = document.querySelector('.nav-toggle');
