@@ -1,7 +1,7 @@
 ---
 layout: base.njk
-title: "مقالات — مشير مصطفى"
-description: "مقالات وتدوينات مشير مصطفى (Mosheer Mostafa) عن المحتوى والفن والأعمال."
+title: "مقالات – مشير مصطفى"
+description: "عن المحتوى والفن وتدوينات مشير مصطفى (Mosheer Mostafa) والأصل."
 keywords: "مقالات مشير مصطفى, Mosheer Mostafa blog, تدوينات"
 activeNav: "articles"
 showSplash: false
@@ -11,16 +11,27 @@ showSplash: false
   <div class="container">
     <p class="eyebrow">مقالات</p>
     <h1>مساحة الكتابة</h1>
-    <p>هنا هتتحط المقالات والتدوينات أول ما تبدأ تكتب — كل مقال هيظهر هنا بترتيب زمني.</p>
+    <p>هنا هتحط المقالات والتدوينات – أول ما تبدأ تكتب، كل مقال هيظهر هنا بترتيب زمني.</p>
   </div>
 </header>
 
 <section class="section">
   <div class="container">
-    <div class="empty-state reveal">
-      <h3>لسه معندناش مقالات</h3>
-      <p>أول ما تجهز أول مقال، هيبان هنا. تقدر تربطه بأي حاجة نزلتها على القنوات كمان.</p>
-      <a href="/contact/" class="btn btn-primary">تواصل عشان نجهز أول مقال</a>
-    </div>
+    {% if collections.articles.length %}
+      <div class="articles-list">
+        {% for article in collections.articles %}
+          <article class="article-card">
+            <h3><a href="{{ article.url }}">{{ article.data.title }}</a></h3>
+            {% if article.data.description %}<p>{{ article.data.description }}</p>{% endif %}
+          </article>
+        {% endfor %}
+      </div>
+    {% else %}
+      <div class="empty-state reveal">
+        <h3>لسه معندناش مقالات</h3>
+        <p>أول ما تجهز أول مقال، هيبان هنا. تقدر تريطه بأي حاجة نزلتها على القنوات كمان.</p>
+        <a href="/contact/" class="btn btn-primary">تواصل عشان نجهز أول مقال</a>
+      </div>
+    {% endif %}
   </div>
 </section>
