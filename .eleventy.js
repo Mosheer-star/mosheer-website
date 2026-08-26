@@ -5,6 +5,9 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("js");
   eleventyConfig.addPassthroughCopy("assets");
   eleventyConfig.addPassthroughCopy("admin");
+    eleventyConfig.addCollection("articles", (collectionApi) => {
+    return collectionApi.getFilteredByGlob("articles/*.md").sort((a, b) => b.date - a.date);
+  });
   return {
     pathPrefix: "/mosheer-website/",
     dir: {
