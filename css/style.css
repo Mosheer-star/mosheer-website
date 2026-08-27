@@ -670,18 +670,3 @@ body.intro-active{ overflow:hidden; height:100vh; }
   -webkit-text-fill-color: transparent;
   animation: brand-shimmer 3s ease-in-out infinite;
 }
-.brand-name {
-  background: linear-gradient(90deg, currentColor 40%, #CC9A47 50%, currentColor 60%);
-  background-size: 300% 100%;
-  background-position: 200% 0;
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: brand-shimmer 3s ease-in-out infinite;
-}
-
-@keyframes brand-shimmer {
-  0% { background-position: 200% 0; }
-  30% { background-position: -100% 0; }
-  100% { background-position: -100% 0; }
-}
